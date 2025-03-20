@@ -20,8 +20,6 @@ else:
 
   st.write("Podgląd danych:", df.head())
   
-  st.set_page_config(page_title="Analiza użytkowników", layout="wide")
-  st.title("Analiza Aktywności Użytkowników Aplikacji Mobilnej")
   
   #Filtracja
   selected_country = st.selectbox("Wybierz kraj:", df["country"].unique())
