@@ -18,7 +18,6 @@ else:
   df = pd.read_sql("SELECT * FROM users_activity", conn)
   conn.close()
 
-  st.title("Analiza Aktywności Użytkowników Aplikacji Mobilnej")
   st.write("Podgląd danych:", df.head())
   
   st.set_page_config(page_title="Analiza użytkowników", layout="wide")
