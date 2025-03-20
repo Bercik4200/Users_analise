@@ -8,6 +8,11 @@ import streamlit as st # type: ignore
 st.set_page_config(page_title="Analiza użytkowników", layout="wide")
 
 db_path = os.path.join(os.getcwd(), "users_data.db")
+st.title("Analiza Aktywności Użytkowników Aplikacji Mobilnej")
+
+if not os.path.exists(db_path): 
+  st.error("Plik `users_data.db` nie został znaleziony! Upewnij się, że dodałeś go do repozytorium.")
+else:
 conn = sqlite3.connect(db_path)
 
 df = pd.read_sql("SELECT * FROM users_activity", conn)
